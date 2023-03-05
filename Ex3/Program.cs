@@ -41,10 +41,10 @@ int InputUser(string message)
 void AverageforColumn(double[,] array, int row)
 {
     double average = 0;
-    for (int i = 0; i < array.GetLength(0+1); i++)
+    for (int i = 0; i < array.GetLength(0 + 1); i++)
     {
         double summ = 0;
-        for (int j = 0; j < array.GetLength(1-1); j++)
+        for (int j = 0; j < array.GetLength(1 - 1); j++)
         {
             summ = summ + array[j, i];
         }
@@ -63,4 +63,5 @@ if (i == 0 || j == 0)
 {
     System.Console.WriteLine("Параметры массива заданы не верно");
 }
-else AverageforColumn(array, i);
+else
+    AverageforColumn(array, i);
