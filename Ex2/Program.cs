@@ -40,20 +40,20 @@ void PrintArray(int[,] array)
 
 
 
-int[,] array = GenerateArray(3, 4); 
+int[,] array = GenerateArray(4, 4); 
 PrintArray(array); 
-int row = InputUser("Введите номер строки массива ....  > "); 
-int col = InputUser("Введите номер столбца массива ....  > "); 
-if (row <= 0 || col <= 0)
-    {
-        System.Console.WriteLine("Некорректный ввод. Значения не могут быть равны 0 или меньше 0"); 
-        Environment.Exit( 0 );
-    }
+int row =  InputUser("Введите номер строки массива ....  > ") - 1; 
+int col =  InputUser("Введите номер столбца массива ....  > ") - 1; 
+ if (row < 0 || col < 0)
+     {
+         System.Console.WriteLine("Некорректный ввод. Значения не могут быть равны 0 или меньше 0"); 
+         Environment.Exit( 0 );
+     }
 if (array.GetLength(0)<= row || array.GetLength(1) <= col) 
 {
     System.Console.WriteLine("Числа нет в массиве");
 }
-else System.Console.WriteLine(array[row-1, col-1]);
+else System.Console.WriteLine(array[row, col]);
   
 
 
